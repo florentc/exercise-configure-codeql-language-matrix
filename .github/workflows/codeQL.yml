@@ -8,6 +8,10 @@ jobs:
   CodeQL-Build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        language: ["java", "csharp"]
+
     permissions:
       # required for all workflows
       security-events: write
